@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="TierListStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Tier List</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><a href="index.html"> <img src="./images/Logo.png" height="30" /> </a
+        ></span>
+
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"
+              ><a href="#"> <img src="./images/Logo.png" height="30" /> </a
+            ></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="MoviePage.html">Movies</a></li>
+            <li><a href="TV-Show.html">TV-Shows</a></li>
+            <li><a href="Anime.html">Anime</a></li>
+            <li><a href="Favorite.html">Favorite</a></li>
+            <li><a href="TierList.html">Tier List</a></li>
+          </ul>
+        </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+          <img
+            src="images/UserProfile.jpg"
+            class="user-pic"
+            onclick="toggleMenu()"
+          />
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="images/UserProfile.jpg" />
+                <div class="username">
+                  <h2>Mirzac Nicolae</h2>
+                </div>
+              </div>
+              <hr />
+
+              <a href="ProfilePage.html" class="sub-menu-link">
+                <img src="profile-menu-img/profile.png" />
+                <p>Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="profile-menu-img/setting.png" />
+                <p>Setting</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="profile-menu-img/logout.png" />
+                <p>Logout</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="TopTitle">
+      <p>Tier List</p>
+      <button class="save-button">Save</button>
+    </div>
+
+    <div class="tier-list">
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header-SS">
+            <h3>S+</h3>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header">
+            <h2>S</h2>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header">
+            <h2>A</h2>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header">
+            <h2>B</h2>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header">
+            <h2>C</h2>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header">
+            <h2>D</h2>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header">
+            <h2>E</h2>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="tier-container">
+        <div class="tier">
+          <div class="tier-header">
+            <h2>F</h2>
+            <ul class="sortable connectedSortable" id="s-tier">
+              <li class="sortable-item">+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tier-selector">
+      <div class="selector">
+        <ul class="sortable connectedSortable" id="s-tier">
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+          <li class="sortable-item">+</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2023 MovieNights by Mirzac Nicolae. All rights reserved.</p>
+        <p></p>
+        <p><a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".sortable")
+          .sortable({
+            connectWith: ".connectedSortable",
+            cursor: "move",
+            placeholder: "sortable-placeholder",
+            start: function (event, ui) {
+              ui.item.addClass("sortable-item-dragging");
+            },
+            stop: function (event, ui) {
+              ui.item.removeClass("sortable-item-dragging");
+            },
+          })
+          .disableSelection();
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      const body = document.querySelector("body"),
+        nav = document.querySelector("nav"),
+        modeToggle = document.querySelector(".dark-light"),
+        searchToggle = document.querySelector(".searchToggle"),
+        sidebarOpen = document.querySelector(".sidebarOpen"),
+        siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+      if (getMode && getMode === "dark-mode") {
+        body.classList.add("dark");
+      }
+
+      // js code to toggle dark and light mode
+      modeToggle.addEventListener("click", () => {
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if (!body.classList.contains("dark")) {
+          localStorage.setItem("mode", "light-mode");
+        } else {
+          localStorage.setItem("mode", "dark-mode");
+        }
+      });
+
+      // js code to toggle search box
+      searchToggle.addEventListener("click", () => {
+        searchToggle.classList.toggle("active");
+      });
+
+      //   js code to toggle sidebar
+      sidebarOpen.addEventListener("click", () => {
+        nav.classList.add("active");
+      });
+
+      body.addEventListener("click", (e) => {
+        let clickedElm = e.target;
+
+        if (
+          !clickedElm.classList.contains("sidebarOpen") &&
+          !clickedElm.classList.contains("menu")
+        ) {
+          nav.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

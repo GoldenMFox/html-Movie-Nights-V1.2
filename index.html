@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Ranking and Rating Website...</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><a href="index.html">
+            <img src="./images/Logo/Logo.png" height="30" /> </a
+        ></span>
+
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"
+              ><a href="#"> <img src="./images/Logo/Logo.png" height="30" /> </a
+            ></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="MoviePage.html">Movies</a></li>
+            <li><a href="TV-Show.html">TV-Shows</a></li>
+            <li><a href="Anime.html">Anime</a></li>
+            <li><a href="Favorite.html">Favorite</a></li>
+            <li><a href="TierList.html">Tier List</a></li>
+          </ul>
+        </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+          <img
+            src="images/UserProfile.jpg"
+            class="user-pic"
+            onclick="toggleMenu()"
+          />
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="images/UserProfile.jpg" />
+                <div class="username">
+                  <h2>Mirzac Nicolae</h2>
+                </div>
+              </div>
+              <hr />
+
+              <a href="ProfilePage.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/profile.png" />
+                <p>Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/setting.png" />
+                <p>Setting</p>
+                <span>></span>
+              </a>
+              <a href="ContactUs.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/contact.png" />
+                <p>Contact Us</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/logout.png" />
+                <p>Logout</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div
+        id="carouselDark"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselDark"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="8000">
+            <img
+              src="images/Landscape/bluebittle.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img
+              src="images/Landscape/shawschank.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/Landscape/green.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img
+              src="images/Landscape/got.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h1>Top Rated Movies</h1>
+
+      <div id="movie-list">
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/openhimer.jpg "
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">
+              <a href="MovieTemplate.html">Oppenhimer</a>
+            </h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Forrest.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Forest Gump</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/The_Shawshank_Redemption.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Shawshank Redemption</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/The Green Mile.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Green Mile</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.9</span>
+              </div>
+              <span class="movie-year-text">1999</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/castaway.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Cast Away</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.8</span>
+              </div>
+              <span class="movie-year-text">2000</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Identity.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Identity</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.7</span>
+              </div>
+              <span class="movie-year-text">2003</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/theimitationgame.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Imitation Game</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.8</span>
+              </div>
+              <span class="movie-year-text">2014</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Room 1408.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Room 1408</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.0</span>
+              </div>
+              <span class="movie-year-text">2007</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/The mist.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Mist</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.0</span>
+              </div>
+              <span class="movie-year-text">2007</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/bluebittle.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Blue Beetle</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.3</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/the ruins.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Ruins</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.3</span>
+              </div>
+              <span class="movie-year-text">2008</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/armagedon.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Armageddon</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.8</span>
+              </div>
+              <span class="movie-year-text">1998</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/hountedmansion.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Haunted Mansion</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 6.9</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/thegirlnextdoor.webp"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Girl Next Door</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.3</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/dasktilldawn.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">From Dusk Till Dawn</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.5</span>
+              </div>
+              <span class="movie-year-text">1996</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/therock.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Rock</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1996</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/iseeyou.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">I See You</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.5</span>
+              </div>
+              <span class="movie-year-text">2019</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/meme.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Memento</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">2000</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/theothers.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Others</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">2001</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/face.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Face/Off</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/heat.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Heat</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1995</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/thedescent.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Descent</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">2005</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/fight.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Fight Club</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.7</span>
+              </div>
+              <span class="movie-year-text">1999</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/GoodFellas.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">GoodFellas</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1990</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/The Godfather.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Godfather</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1997</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/thehurricane.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">The Hurricane</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1999</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/crimson.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Crimson Tide</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">1995</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Pulp Fiction.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Pulp Fiction</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.9</span>
+              </div>
+              <span class="movie-year-text">1994</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Fresh.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Fresh</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 7.9</span>
+              </div>
+              <span class="movie-year-text">2022</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/FREAKY.webp"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Freaky</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 4.8</span>
+              </div>
+              <span class="movie-year-text">2020</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/barbie.webp"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Barbie</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Barbarian.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Barbarian</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 7.8</span>
+              </div>
+              <span class="movie-year-text">2022</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Dawn of the living dead.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Dawn of the living dead</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 7.9</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/secret window.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Secret Window</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: TBA</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/saw.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Saw</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.2</span>
+              </div>
+              <span class="movie-year-text">2004</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/saw 2.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Saw II</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 9.7</span>
+              </div>
+              <span class="movie-year-text">2005</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/mision imposible.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Mission: Impossible - Dead Reckoning</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.3</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Spider_Man_Across_the_Spider_Verse-524691364-large.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Spider-Man: Across the Spider-Verse</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 10.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Fast X.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Fast X</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.0</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Transformers.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Transformers: Rise Of The Beasts</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 8.3</span>
+              </div>
+              <span class="movie-year-text">2023</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-item">
+          <div class="movie-content">
+            <img
+              src="images/Movie-Posters/Smile.jpg"
+              alt="Movie 2 Poster"
+              class="movie-poster"
+            />
+            <h2 class="movie-title">Smile</h2>
+            <div class="movie-rating">
+              <div class="ratings-container">
+                <span class="movie-rating-text">IMDB: 9.0</span>
+                <span class="movie-rating-text">User Rating: 3.5</span>
+              </div>
+              <span class="movie-year-text">2022</span>
+            </div>
+            <div class="movie-actions">
+              <button>Add to Favorites</button>
+              <button>Rate Movie</button>
+            </div>
+          </div>
+        </div>
+        <!-- Add more movie items as needed -->
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <p>
+          &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
+          rights reserved.
+        </p>
+        <p></p>
+        <p><a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <!-- carusell functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./JS/profileMenuDropdown.js"></script>
+
+    <script src="./JS/darkMode.js"></script>
+
+    <script src="./JS/spotlightEffect.js"></script>
+  </body>
+</html>

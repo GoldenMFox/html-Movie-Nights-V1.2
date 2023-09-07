@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="TV-ShowStyle.Css" />
+    <title>TV-Shows</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-bar">
+        <i class="bx bx-menu sidebarOpen"></i>
+        <span class="logo navLogo"
+          ><a href="index.html">
+            <img src="./images/Logo/Logo.png" height="30" /> </a
+        ></span>
+
+        <div class="menu">
+          <div class="logo-toggle">
+            <span class="logo"
+              ><a href="#"> <img src="./images/Logo/Logo.png" height="30" /> </a
+            ></span>
+            <i class="bx bx-x siderbarClose"></i>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="MoviePage.html">Movies</a></li>
+            <li><a href="TV-Show.html">TV-Shows</a></li>
+            <li><a href="Anime.html">Anime</a></li>
+            <li><a href="Favorite.html">Favorite</a></li>
+            <li><a href="TierList.html">Tier List</a></li>
+          </ul>
+        </div>
+
+        <div class="darkLight-searchBox">
+          <div class="dark-light">
+            <i class="bx bx-moon moon"></i>
+            <i class="bx bx-sun sun"></i>
+          </div>
+
+          <div class="searchBox">
+            <div class="searchToggle">
+              <i class="bx bx-x cancel"></i>
+              <i class="bx bx-search search"></i>
+            </div>
+
+            <div class="search-field">
+              <input type="text" placeholder="Search..." />
+              <i class="bx bx-search"></i>
+            </div>
+          </div>
+          <img
+            src="images/UserProfile.jpg"
+            class="user-pic"
+            onclick="toggleMenu()"
+          />
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="images/UserProfile.jpg" />
+                <div class="username">
+                  <h2>Mirzac Nicolae</h2>
+                </div>
+              </div>
+              <hr />
+
+              <a href="ProfilePage.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/profile.png" />
+                <p>Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/setting.png" />
+                <p>Setting</p>
+                <span>></span>
+              </a>
+              <a href="ContactUs.html" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/contact.png" />
+                <p>Contact Us</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img src="./Images/Icons/profile-menu-img/logout.png" />
+                <p>Logout</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="layout">
+      <div class="side-filter">
+        <div class="filter-title-general">
+          <h1>Filters</h1>
+          <img src="./images/Icons/filter.png" height="26px" />
+        </div>
+        <div class="sidebar">
+          <!-- Genre Filter -->
+          <div class="filter-group">
+            <h6 class="filter-title">Genre</h6>
+            <ul class="filter-list">
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">All</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Action</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Adventure</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Animation</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Comedy</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Crime</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Drama</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Fantasy</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Horror</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Mystery</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Romance</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Sci-Fi</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Thriller</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">War</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Western</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" />
+                  <span class="filter-label">Biography</span>
+                </label>
+              </li>
+
+              <!-- Add other genre options here -->
+            </ul>
+          </div>
+
+          <!-- Relese Year Filter -->
+          <div class="filter-group">
+            <h6 class="filter-title">Release Year</h6>
+            <!--<input type="range" class="filter-range" min="1900" max="2023" ------------------(Year-Rangeul)/>-->
+            <div class="year-range-values">
+              <input class="min-year" placeholder="1900" type="number" />
+              <input class="max-year" placeholder="2023" type="number" />
+            </div>
+            <button class="glow-on-hover" type="button">APPLY</button>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>TV-Shows</h1>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="sortDropdownButton"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Sort by
+          </button>
+          <div class="dropdown-menu" aria-labelledby="sortDropdownButton">
+            <a class="dropdown-item" href="#" onclick="sortMovies('default')"
+              >Default</a
+            >
+            <a class="dropdown-item" href="#" onclick="sortMovies('highest')"
+              >Highest Rating First</a
+            >
+            <a class="dropdown-item" href="#" onclick="sortMovies('lowest')"
+              >Lowest Rating First</a
+            >
+            <a
+              class="dropdown-item"
+              href="#"
+              onclick="sortMovies('highest_year')"
+              >Highest Year First</a
+            >
+            <a
+              class="dropdown-item"
+              href="#"
+              onclick="sortMovies('lowest_year')"
+              >Lowest Year First</a
+            >
+          </div>
+        </div>
+
+        <div id="movie-list">
+          <div class="movie-item" data-rating="9.0">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/secretinvasion.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Secret Invasion</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.0</span>
+                <span class="movie-year-text">2023</span>
+              </div>
+
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/loki.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Loki</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.5</span>
+                <span class="movie-year-text">2021</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.4">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/wanda.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">WandaVision</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.4</span>
+                <span class="movie-year-text">2021</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/hawkey.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Hawkeye</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.5</span>
+                <span class="movie-year-text">2021</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="8.9">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/falcon.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">The Falcon and the Winter Soldier</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 8.9</span>
+                <span class="movie-year-text">2021</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.7">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/moonknight.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Moon Knight</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.7</span>
+                <span class="movie-year-text">2022</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="5.0">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/msmarvel.jpeg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Ms. Marvel</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 5.0</span>
+                <span class="movie-year-text">2022</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.6">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/Daredevil.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Daredevil</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.6</span>
+                <span class="movie-year-text">2015</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="1.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/shehulk.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">She-Hulk</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 1.5</span>
+                <span class="movie-year-text">2022</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.2">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/Agents of Shield.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Agents of Shield</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.2</span>
+                <span class="movie-year-text">2013</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.1">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/the-punisher.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">The Punisher</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.1</span>
+                <span class="movie-year-text">2017</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="7.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/ironfist.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Iron Fist</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 7.5</span>
+                <span class="movie-year-text">2017</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.7">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/arrow.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Arrow</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.7</span>
+                <span class="movie-year-text">2012</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="8.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/flash.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">The Flash</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 8.5</span>
+                <span class="movie-year-text">2014</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="8.0">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/dclegends.webp"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Legends of Tomorrow</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 8.0</span>
+                <span class="movie-year-text">2016</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="7.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/supergirl.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Supergirl</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 7.5</span>
+                <span class="movie-year-text">2015</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.2">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/Constantine.jpeg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Constantine</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.2</span>
+                <span class="movie-year-text">2014</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.3">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/smallvile.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Smallville</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.3</span>
+                <span class="movie-year-text">2001</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="7.9">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/Black Lightning.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Black Lightning</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 7.9</span>
+                <span class="movie-year-text">2018</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.1">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/lucifer.jpeg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Lucifer</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.1</span>
+                <span class="movie-year-text">2016</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="9.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/Supernatural.jpeg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">Supernatural</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 9.5</span>
+                <span class="movie-year-text">2005</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="movie-item" data-rating="3.5">
+            <div class="movie-content">
+              <img
+                src="images/TV-Shows/The 100.jpg"
+                alt="Movie 2 Poster"
+                class="movie-poster"
+              />
+              <h2 class="movie-title">The 100</h2>
+              <div class="movie-rating">
+                <span class="movie-rating-text">Rating: 8.0</span>
+                <span class="movie-year-text">2014</span>
+              </div>
+              <div class="movie-actions">
+                <button>Add to Favorites</button>
+                <button>Rate Show</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more movie items as needed -->
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Page-navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item"><a class="page-link" href="#">...</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2023 MovieNights by Mirzac Nicolae & Alexandru Donoaga. All
+          rights reserved.
+        </p>
+        <p></p>
+        <p><a href="#">Terms of Service</a></p>
+      </div>
+    </footer>
+
+    <!-- sort by dropdown menu -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./JS/profileMenuDropdown.js"></script>
+
+    <script src="./JS/sideFilter.js"></script>
+
+    <script src="./JS/darkMode.js"></script>
+
+    <script src="./JS/spotlightEffect.js"></script>
+  </body>
+</html>
